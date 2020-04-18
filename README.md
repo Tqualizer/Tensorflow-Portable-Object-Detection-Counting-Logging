@@ -18,11 +18,11 @@ Note: This can be futher enhanced with object tracking to avoid overcounting of 
 ## The main steps are as follows:
 1. Set up and install TensorFlow and OpenCV on your Raspberry Pi by following this great guide by Evan https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py 
 The guide walks through the following steps:
-  A. Update the Raspberry Pi
-  B. Install TensorFlow
-  C. Install OpenCV
-  D. Compile and install Protobuf
-  E. Set up TensorFlow directory structure and the PYTHONPATH variable
+  1. Update the Raspberry Pi
+  1. Install TensorFlow
+  1. Install OpenCV
+  1. Compile and install Protobuf
+  1. Set up TensorFlow directory structure and the PYTHONPATH variable
   
-  
+zxcvbnm,  
 s
