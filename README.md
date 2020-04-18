@@ -26,10 +26,10 @@ The guide walks through the following steps:
 1. **Make sure your camera is configured** by following these instructions https://www.raspberrypi.org/documentation/configuration/camera.md
 1. Download or clone this Repo and put the *open_cv_group_detection.py* in your /object_detection directory
 1. (optional) **Customisation**
-        1. Select a custom model and number of objects
-        1. Select which objects to include in the log file
-        1. Select which criteria to apply for logging
-        1. Specify the save location for the log file and image captures
+    1. Select a custom model and number of objects
+    1. Select which objects to include in the log file
+    1. Select which criteria to apply for logging
+    1. Specify the save location for the log file and image captures
 1. **Run** the *open_cv_group_detection.py* from your /object_detection directory
 
 ## Appendix: Remote logging (Windows 10 example)
