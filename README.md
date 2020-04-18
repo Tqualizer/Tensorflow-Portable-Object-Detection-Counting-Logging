@@ -16,13 +16,23 @@ Suggested usage: Detecting groups of people not observing social distancing whil
 Note: This can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
 
 ## The main steps are as follows:
-1. Set up and install TensorFlow and OpenCV on your Raspberry Pi by following this great guide by Evan https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py 
+1. **Set up and install TensorFlow and OpenCV on your Raspberry Pi** by following this great guide by Evan https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py 
 The guide walks through the following steps:
     1. Update the Raspberry Pi
     1. Install TensorFlow
     1. Install OpenCV
     1. Compile and install Protobuf
     1. Set up TensorFlow directory structure and the PYTHONPATH variable
-  
-zxcvbnm,  
-s
+1. **Make sure your camera is configured** by following these instructions https://www.raspberrypi.org/documentation/configuration/camera.md
+1. Download or clone this Repo and put the *open_cv_group_detection.py* in your /object_detection directory
+1. (optional) **Customisation**
+        1. Select a custom model and number of objects
+        1. Select which objects to include in the log file
+        1. Select which criteria to apply for logging
+        1. Specify the save location for the log file and image captures
+1. **Run** the *open_cv_group_detection.py* from your /object_detection directory
+
+## Appendix: Remote logging (Windows 10 example)
+1. Comment out the following sections in *open_cv_group_detection.py* 
+1. Follow the instructions to set up SSH  here https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md
+1. **Run** the *open_cv_group_detection.py* from your /object_detection directory
