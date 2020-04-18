@@ -27,6 +27,25 @@ The guide walks through the following steps:
 1. Download or clone this Repo and put the *open_cv_group_detection.py* in your /object_detection directory
 1. (optional) **Customisation**
     1. Select a custom model and number of objects
+'''    
+# Name of the directory containing the object detection module we're using
+MODEL_NAME = 'ssdlite_mobilenet_v2_coco_2018_05_09'
+
+# Grab path to current working directory
+CWD_PATH = os.getcwd()
+
+# Path to frozen detection graph .pb file, which contains the model that is used
+# for object detection.
+PATH_TO_CKPT = os.path.join(CWD_PATH,MODEL_NAME,'frozen_inference_graph.pb')
+
+# Path to label map file
+PATH_TO_LABELS = os.path.join(CWD_PATH,'data','mscoco_label_map.pbtxt')
+
+# Number of classes the object detector can identify
+NUM_CLASSES = 90
+'''    
+    
+    
     1. Select which objects to include in the log file
     1. Select which criteria to apply for logging
     1. Specify the save location for the log file and image captures
