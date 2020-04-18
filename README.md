@@ -5,8 +5,7 @@ This Repo gives step by step instructions and script to show how build and deplo
 Boilerplate object detection code was copied from: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py
 
 
-## Main features:
-* Object detection
+## Main features added
 * Custom logging based on your object specific criteria (e.g. each time a group of more than 2 people walk past)
 * Capture a photo each time your object specific criteria is triggered 
 * Write the log to csv file for further analysis 
@@ -75,10 +74,10 @@ NUM_CLASSES = 90
    * Specify the save location for the log file and image captures (by default this is the working directory).
 
 5. **Run** the *open_cv_group_detection.py* from your /object_detection directory
-<Running code>
-<Viewer>
-<Image capture>
-<Log file>
+>Running code
+>Viewer
+>Image capture
+>Log file
     
 ## Appendix: Remote logging (Windows 10 example)
 1. Comment out the following sections in *open_cv_group_detection.py*
@@ -99,4 +98,4 @@ NUM_CLASSES = 90
 ```
 2. Follow the instructions to set up SSH  here https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md
 3. **Run** the *open_cv_group_detection.py* from your /object_detection directory
-<Picture of SSH log file>
+>Picture of SSH log file
