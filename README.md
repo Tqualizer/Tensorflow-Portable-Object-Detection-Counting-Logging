@@ -29,7 +29,7 @@ The guide walks through the following steps:
 1. **Make sure your camera is configured** by following these instructions https://www.raspberrypi.org/documentation/configuration/camera.md
 1. Download or clone this Repo and put the *open_cv_group_detection.py* in your /object_detection directory
 1. (optional) **Customisation**
-   * Select a custom model and number of objects 
+ * Select a custom model and number of objects 
 
 ```# Name of the directory containing the object detection module we're using
 MODEL_NAME = 'ssdlite_mobilenet_v2_coco_2018_05_09'
