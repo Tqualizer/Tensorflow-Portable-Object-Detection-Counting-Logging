@@ -26,7 +26,7 @@ The guide walks through the following steps:
 1. **Make sure your camera is configured** by following these instructions https://www.raspberrypi.org/documentation/configuration/camera.md
 1. Download or clone this Repo and put the *open_cv_group_detection.py* in your /object_detection directory
 1. (optional) **Customisation**
-* Select a custom model and number of objects 
+   * Select a custom model and number of objects 
 ```    
 # Name of the directory containing the object detection module we're using
 MODEL_NAME = 'ssdlite_mobilenet_v2_coco_2018_05_09'
@@ -44,9 +44,9 @@ PATH_TO_LABELS = os.path.join(CWD_PATH,'data','mscoco_label_map.pbtxt')
 # Number of classes the object detector can identify
 NUM_CLASSES = 90
 ```
-* Select which objects to include in the log file
-* Select which criteria to apply for logging
-* Specify the save location for the log file and image captures
+   * Select which objects to include in the log file
+   * Select which criteria to apply for logging
+   * Specify the save location for the log file and image captures
 1. **Run** the *open_cv_group_detection.py* from your /object_detection directory
 
 ## Appendix: Remote logging (Windows 10 example)
