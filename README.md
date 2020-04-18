@@ -92,5 +92,5 @@ NUM_CLASSES = 90
         time1 = (t2-t1)/freq
         frame_rate_calc = 1/time1
 ```
-1. Follow the instructions to set up SSH  here https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md
-1. **Run** the *open_cv_group_detection.py* from your /object_detection directory
+2. Follow the instructions to set up SSH  here https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md
+3. **Run** the *open_cv_group_detection.py* from your /object_detection directory
