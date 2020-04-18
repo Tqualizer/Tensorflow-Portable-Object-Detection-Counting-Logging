@@ -78,20 +78,10 @@ NUM_CLASSES = 90
 ## Appendix: Remote logging (Windows 10 example)
 1. Comment out the following sections in *open_cv_group_detection.py*
 ```
-        # Visualizing the results of the detection - 
-        # this is only for show and to visually verify results if needed
-        vis_util.visualize_boxes_and_labels_on_image_array(
-            frame,
-            np.squeeze(boxes),
-            np.squeeze(classes).astype(np.int32),
-            np.squeeze(scores),
-            category_index,
-            use_normalized_coordinates=True,
-            line_thickness=6,
-            min_score_thresh=0.50)
-```
-and
-```
+                # Take a picture for authorities
+                cv2.imwrite("evidence.bmp", frame)
+                time.sleep(5) #- alter depending on footfall or replace with object tracking to reduce overcounting
+        
         # Used to dispay framerate in live viewer
         cv2.putText(frame,"FPS: {0:.2f}".format(frame_rate_calc),(30,50),font,1,(255,255,0),2,cv2.LINE_AA)
 
