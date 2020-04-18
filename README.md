@@ -48,7 +48,7 @@ PATH_TO_LABELS = os.path.join(CWD_PATH,'data','mscoco_label_map.pbtxt')
 NUM_CLASSES = 90
 ```
 
-  * Select which objects to include in the log file
+   * Select which objects to include in the log file
 ```
  # pulling raw output from object detection. Creates a list of dicts 
         # with details of each of the objects meeting the threshold in a given frame.
@@ -57,7 +57,7 @@ NUM_CLASSES = 90
         # Choose your object
         to_detect = 'person' 
 ```  
-  * Select which criteria to apply for logging in the evidence stamp
+   * Select which criteria to apply for logging in the evidence stamp
 ```
         # Creates a log if the chosen object has been detected.
         if Validobj:
@@ -71,7 +71,7 @@ NUM_CLASSES = 90
                 evidence_stamp = [data.count(to_detect),to_detect,time.ctime()]
                 output.append(evidence_stamp)
 ```
-  * Specify the save location for the log file and image captures (by default this is the working directory).
+   * Specify the save location for the log file and image captures (by default this is the working directory).
 
 5. **Run** the *open_cv_group_detection.py* from your /object_detection directory
 
