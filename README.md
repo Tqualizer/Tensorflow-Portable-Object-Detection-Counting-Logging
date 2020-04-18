@@ -48,7 +48,7 @@ NUM_CLASSES = 90
   * Select which objects to include in the log file
   * Select which criteria to apply for logging
   * Specify the save location for the log file and image captures
-    1. **Run** the *open_cv_group_detection.py* from your /object_detection directory
+5. **Run** the *open_cv_group_detection.py* from your /object_detection directory
 
 ## Appendix: Remote logging (Windows 10 example)
 1. Comment out the following sections in *open_cv_group_detection.py* 
