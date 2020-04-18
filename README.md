@@ -46,11 +46,58 @@ NUM_CLASSES = 90
 ```
 
   * Select which objects to include in the log file
-  * Select which criteria to apply for logging
-  * Specify the save location for the log file and image captures
+```
+ # pulling raw output from object detection. Creates a list of dicts 
+        # with details of each of the objects meeting the threshold in a given frame.
+        Validobj = [category_index.get(value) for index, value in enumerate (classes[0]) if scores [0,index]>0.5]
+        
+        # Choose your object
+        to_detect = 'person' 
+```  
+  * Select which criteria to apply for logging in the evidence stamp
+```
+        # Creates a log if the chosen object has been detected.
+        if Validobj:
+            data = [i["name"] for i in Validobj]
+            # If in the given frame the number of a given object detected meets the condition then a log is made   
+            if data.count(to_detect)>2:
+                # Writes a line with how many of the object was detected along with a timestamp
+                Summary = ["There is a group of " + str(data.count(to_detect)) + " people" ,time.ctime()]
+                print(Summary)
+                
+                evidence_stamp = [data.count(to_detect),to_detect,time.ctime()]
+                output.append(evidence_stamp)
+```
+  * Specify the save location for the log file and image captures (by default this is the working directory).
+
 5. **Run** the *open_cv_group_detection.py* from your /object_detection directory
 
 ## Appendix: Remote logging (Windows 10 example)
-1. Comment out the following sections in *open_cv_group_detection.py* 
+1. Comment out the following sections in *open_cv_group_detection.py*
+```
+        # Visualizing the results of the detection - 
+        # this is only for show and to visually verify results if needed
+        vis_util.visualize_boxes_and_labels_on_image_array(
+            frame,
+            np.squeeze(boxes),
+            np.squeeze(classes).astype(np.int32),
+            np.squeeze(scores),
+            category_index,
+            use_normalized_coordinates=True,
+            line_thickness=6,
+            min_score_thresh=0.50)
+```
+and
+```
+        # Used to dispay framerate in live viewer
+        cv2.putText(frame,"FPS: {0:.2f}".format(frame_rate_calc),(30,50),font,1,(255,255,0),2,cv2.LINE_AA)
+
+        # All the results have been drawn on the frame, so it's time to display it.
+        cv2.imshow('Object detector', frame)
+
+        t2 = cv2.getTickCount()
+        time1 = (t2-t1)/freq
+        frame_rate_calc = 1/time1
+```
 1. Follow the instructions to set up SSH  here https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md
 1. **Run** the *open_cv_group_detection.py* from your /object_detection directory
