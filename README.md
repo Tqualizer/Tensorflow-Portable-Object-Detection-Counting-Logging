@@ -2,7 +2,6 @@
 This Repo gives step by step instructions and script to show how build and deploy a mobile (Respberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model.
 
 Boilerplate object detection code was copied from: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py
-Other suggested reading: https://github.com/vineeth2628/Object-counting-using-tensorflow-on-raspberry-pi
 
 ## Main features:
 * Object detection
