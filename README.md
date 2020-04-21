@@ -2,7 +2,7 @@
 This Repo gives step by step instructions and script to show how build and deploy a mobile (Respberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model.
 >Image of the Pi and screen
 
-![Sample Setup](/images/Setup picture.jpg)
+![Sample Setup](https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg)
 Format: ![Alt Text](url)
 
 Boilerplate object detection code was copied from: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py
