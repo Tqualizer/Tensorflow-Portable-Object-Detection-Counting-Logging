@@ -7,7 +7,7 @@ This Repo gives step by step instructions and script to show how build and deplo
 Boilerplate object detection code was copied from: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py
 
 
-![Birds Setup](https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds%20example.png)
+![Birds Setup](https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds%20example.png | width = 50)
 
 Suggested usage: Detecting groups of people not observing social distancing whilst walking through a narrow line of sight.
 Note: This can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
