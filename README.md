@@ -3,9 +3,14 @@ This Repo gives step by step instructions and script to show how build and deplo
 >Image of the Pi and screen
 
 ![Sample Setup](https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg)
-Format: ![Alt Text](url)
 
 Boilerplate object detection code was copied from: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py
+
+
+![Birds Setup](https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds%20example.png)
+
+Suggested usage: Detecting groups of people not observing social distancing whilst walking through a narrow line of sight.
+Note: This can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
 
 
 ## Main features added
@@ -14,11 +19,7 @@ Boilerplate object detection code was copied from: https://github.com/EdjeElectr
 * Write the log to csv file for further analysis 
 
 
-To avoid data privacy concerns in live use on people the active object viewer and photo capture should be disabled. The appendix includes instructions how to remotely access the  detection log in the Raspberry Pi for passive monitoring without using video or photo capture.
-
-
-Suggested usage: Detecting groups of people not observing social distancing whilst walking through a narrow line of sight.
-Note: This can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
+To avoid data privacy concerns in live use on people the active object viewer and photo capture should be disabled. The appendix includes instructions how to remotely access the  detection log in the Raspberry Pi for passive remote logging without using video or photo capture.
 
 
 ## The main steps are as follows:
@@ -32,26 +33,8 @@ The guide walks through the following steps:
 1. **Make sure your camera is configured** by following these instructions https://www.raspberrypi.org/documentation/configuration/camera.md
 1. Download or clone this Repo and put the *open_cv_group_detection.py* in your /object_detection directory
 1. (optional) **Customisation**
- * Select a custom model and number of objects 
-
-```# Name of the directory containing the object detection module we're using
-MODEL_NAME = 'ssdlite_mobilenet_v2_coco_2018_05_09'
-
-# Grab path to current working directory
-CWD_PATH = os.getcwd()
-
-# Path to frozen detection graph .pb file, which contains the model that is used
-# for object detection.
-PATH_TO_CKPT = os.path.join(CWD_PATH,MODEL_NAME,'frozen_inference_graph.pb')
-
-# Path to label map file
-PATH_TO_LABELS = os.path.join(CWD_PATH,'data','mscoco_label_map.pbtxt')
-
-# Number of classes the object detector can identify
-NUM_CLASSES = 90
-```
-
-   * Select which objects to include in the log file
+ * Select a custom model and number of objects (as described in the repo referenced in step 1)
+ * Select which objects to include in the log file
 ```
  # pulling raw output from object detection. Creates a list of dicts 
         # with details of each of the objects meeting the threshold in a given frame.
@@ -76,29 +59,16 @@ NUM_CLASSES = 90
 ```
    * Specify the save location for the log file and image captures (by default this is the working directory).
 
-5. **Run** the *open_cv_group_detection.py* from your /object_detection directory
->Running code
->Viewer
->Image capture
->Log file
-    
+5. **Run** the *open_cv_group_detection.py* from your /object_detection directory. To safely stop the process and save outputs press 'q' to exit.
+
+![Multi_object](https://github.com/Tqualizer/opencv-group-detection/blob/master/Multi-object%20capture%20logging.png)
+
+
 ## Appendix: Remote logging (Windows 10 example)
-1. Comment out the following sections in *open_cv_group_detection.py*
-```
-                # Take a picture for authorities
-                cv2.imwrite("evidence.bmp", frame)
-                time.sleep(5) #- alter depending on footfall or replace with object tracking to reduce overcounting
-        
-        # Used to dispay framerate in live viewer
-        cv2.putText(frame,"FPS: {0:.2f}".format(frame_rate_calc),(30,50),font,1,(255,255,0),2,cv2.LINE_AA)
-
-        # All the results have been drawn on the frame, so it's time to display it.
-        cv2.imshow('Object detector', frame)
-
-        t2 = cv2.getTickCount()
-        time1 = (t2-t1)/freq
-        frame_rate_calc = 1/time1
-```
-2. Follow the instructions to set up SSH  here https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md
-3. **Run** the *open_cv_group_detection.py* from your /object_detection directory
 >Picture of SSH log file
+![Remote Setup](https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg)1. Clone or download *mobile_group_detection.py*
+1. Follow the instructions to set up SSH  here https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md
+1. (Optional) Follow the instructions in the normal example above to customise the type and number of objects which trigger the logging.
+1. **Run** the *mobile_group_detection.py* from your /object_detection directory. Use _Ctrl + C_ to exit the logging mode. _Please note: it may take several seconds or presses to stop the logging completely_ 
+
+
