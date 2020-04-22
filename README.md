@@ -7,8 +7,8 @@ Note: This can be futher enhanced with object tracking to avoid overcounting of 
 I started this project over the Easter weekend in lockdown. I built this using a Raspberry Pi 3B+ and standard IR camera. Starting with the boilerplate code here: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py . Originally I just wanted a way of counting the ducks which swim by my window but I decided to adapt the code further and share to hopefully be of some more practical use! 
 
 <p float="left">
-  <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg" width="200" />
-  <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Multi-object%20capture%20logging.png" width="100" /> 
+  <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg" width="800" />
+  <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Multi-object%20capture%20logging.png" width="500" /> 
 </p>
 
 ## Main features added
