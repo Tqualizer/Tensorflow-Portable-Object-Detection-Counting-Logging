@@ -6,7 +6,10 @@ Note: This can be futher enhanced with object tracking to avoid overcounting of 
 ## Introduction
 I started this project over the Easter weekend in lockdown. I built this using a Raspberry Pi 3B+ and standard IR camera. Starting with the boilerplate code here: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py . Originally I just wanted a way of counting the ducks which swim by my window but I decided to adapt the code further and share to hopefully be of some more practical use! 
 
-![alt-text-1](https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg "title-1") ![alt-text-2](https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds%20example.png "title-2")
+<p float="left">
+  <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg" width="200" />
+  <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Multi-object%20capture%20logging.png" width="100" /> 
+</p>
 
 ## Main features added
 * Custom logging based on your object specific criteria (e.g. each time a group of more than 2 people walk past)
@@ -58,7 +61,7 @@ The guide walks through the following steps:
 
 5. **Run** the *open_cv_group_detection.py* from your /object_detection directory. To safely stop the process and save outputs press 'q' to exit.
 
-![Multi_object](https://github.com/Tqualizer/opencv-group-detection/blob/master/Multi-object%20capture%20logging.png)
+![Multi_object](https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds%20example.png)
 
 
 ## Appendix: Remote logging (Windows 10 example)
