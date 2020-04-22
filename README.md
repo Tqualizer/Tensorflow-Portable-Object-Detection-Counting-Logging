@@ -1,13 +1,10 @@
 # opencv-group-detection
 This Repo gives step by step instructions and script to show how build and deploy a mobile (Respberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model.
->Image of the Pi and screen
-
-![Sample Setup](https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg)
-
 Boilerplate object detection code was copied from: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py
 
+![Sample Setup | 25%](https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg)
 
-![Birds Setup | 50%](https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds%20example.png)
+![Birds Setup | 25%](https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds%20example.png)
 
 Suggested usage: Detecting groups of people not observing social distancing whilst walking through a narrow line of sight.
 Note: This can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
