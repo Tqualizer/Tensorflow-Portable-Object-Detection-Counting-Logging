@@ -1,14 +1,12 @@
 # opencv-group-detection
-This Repo gives step by step instructions and script to show how build and deploy a mobile (Respberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model.
-Boilerplate object detection code was copied from: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py
+# Introduction
+I started this project over the Easter weekend in lockdown. I built this using a Raspberry Pi 3B+ and standard IR camera. Starting with the boilerplate code here: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py . Originally I just wanted a way of counting the ducks which swim by my window but I decided to adapt the code further and share to hopefully be of some more practical use! \
 
 ![Sample Setup | 25%](https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg)
 
+This Repo gives step by step instructions and script to show how build and deploy a mobile (Respberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model.\ Note: This can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
+
 ![Birds Setup | 25%](https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds%20example.png)
-
-Suggested usage: Detecting groups of people not observing social distancing whilst walking through a narrow line of sight.
-Note: This can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
-
 
 ## Main features added
 * Custom logging based on your object specific criteria (e.g. each time a group of more than 2 people walk past)
@@ -16,7 +14,9 @@ Note: This can be futher enhanced with object tracking to avoid overcounting of 
 * Write the log to csv file for further analysis 
 
 
-To avoid data privacy concerns in live use on people the active object viewer and photo capture should be disabled. The appendix includes instructions how to remotely access the  detection log in the Raspberry Pi for passive remote logging without using video or photo capture.
+To avoid data privacy concerns in live use on people the active object viewer and photo capture should be disabled. 
+
+The appendix includes instructions how to remotely access the  detection log in the Raspberry Pi for passive remote logging without using video or photo capture.
 
 
 ## The main steps are as follows:
