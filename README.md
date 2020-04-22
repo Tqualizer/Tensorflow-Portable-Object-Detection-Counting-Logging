@@ -61,8 +61,7 @@ The guide walks through the following steps:
 
 5. **Run** the *open_cv_group_detection.py* from your /object_detection directory. To safely stop the process and save outputs press 'q' to exit.
 
-![Multi_object](https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds%20example.png 200x200)
-
+<img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds%20example.png" alt="drawing" width="200"/>
 
 ## Appendix: Remote logging (Windows 10 example)
 Depending on your use case you might want to set up the group detector in a different location to run remotely and passively collect data over a longer period of time for analysis. I cut out some of the code in the original file and created the instructions below to make this a bit easier.
