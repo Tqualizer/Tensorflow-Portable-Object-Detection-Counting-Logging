@@ -4,7 +4,10 @@ I started this project over the Easter weekend in lockdown. I built this using a
 
 ![Sample Setup | 25%](https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg)
 
-This Repo gives step by step instructions and script to show how build and deploy a mobile (Respberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model./Note: This can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
+This Repo gives step by step instructions and script to show how build and deploy a mobile (Respberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model.
+
+
+Note: This can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
 
 ![Birds Setup | 25%](https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds%20example.png)
 
