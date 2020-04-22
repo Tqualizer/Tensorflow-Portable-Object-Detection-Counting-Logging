@@ -1,10 +1,10 @@
 # opencv-group-detection
 # Introduction
-I started this project over the Easter weekend in lockdown. I built this using a Raspberry Pi 3B+ and standard IR camera. Starting with the boilerplate code here: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py . Originally I just wanted a way of counting the ducks which swim by my window but I decided to adapt the code further and share to hopefully be of some more practical use! \
+I started this project over the Easter weekend in lockdown. I built this using a Raspberry Pi 3B+ and standard IR camera. Starting with the boilerplate code here: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py . Originally I just wanted a way of counting the ducks which swim by my window but I decided to adapt the code further and share to hopefully be of some more practical use! 
 
 ![Sample Setup | 25%](https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg)
 
-This Repo gives step by step instructions and script to show how build and deploy a mobile (Respberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model.\ Note: This can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
+This Repo gives step by step instructions and script to show how build and deploy a mobile (Respberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model./ Note: This can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
 
 ![Birds Setup | 25%](https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds%20example.png)
 
