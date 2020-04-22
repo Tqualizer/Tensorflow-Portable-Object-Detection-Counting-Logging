@@ -61,7 +61,7 @@ The guide walks through the following steps:
 
 5. **Run** the *open_cv_group_detection.py* from your /object_detection directory. To safely stop the process and save outputs press 'q' to exit.
 
-![Multi_object](https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds%20example.png)
+![Multi_object][width = 200](https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds%20example.png)
 
 
 ## Appendix: Remote logging (Windows 10 example)
