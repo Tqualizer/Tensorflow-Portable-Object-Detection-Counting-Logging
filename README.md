@@ -74,7 +74,7 @@ Depending on your use case you might want to set up the group detector in a diff
 
 _Please note: it may take several seconds or presses to stop the logging completely_ 
 
-<p float="left">
-  <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Remote%20setup%20picture.jpg" height="350" />
+<p float="center">
+  <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Remote%20setup%20picture.jpg" height="450" />
 </p>
 
