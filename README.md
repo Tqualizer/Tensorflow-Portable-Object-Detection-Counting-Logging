@@ -1,8 +1,8 @@
-# opencv-group-detection
+# Identify and log objects which meet your type and quantity criteria
 This Repo gives step by step instructions and script to show how build and deploy a mobile (Respberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model.
 
 
-Note: This can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
+Note: This project works best when the camera is aimed at a small area in which objects will move through over the course of a few seconds. To avoid duplicated logs this can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
 ## Introduction
 I started this project over the Easter weekend in lockdown. I built this using a Raspberry Pi 3B+ and standard IR camera. Starting with the boilerplate code here: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py . Originally I just wanted a way of counting the ducks which swim by my window but I decided to adapt the code further and share to hopefully be of some more practical use! 
 
@@ -33,7 +33,11 @@ The guide walks through the following steps:
 1. **Make sure your camera is configured** by following these instructions https://www.raspberrypi.org/documentation/configuration/camera.md
 1. Download or clone this Repo and put the *open_cv_group_detection.py* in your /object_detection directory
 1. (optional) **Customisation**
- * Select a custom model and number of objects (as described in the repo referenced in step 1)
+ * Select a custom model and number of objects (as described in the repo referenced in step 1). 
+ 
+ For this example I used the same coco model as the boilerplate code but depending on what you want to detect and how accurate you need the model to be, other models can be easily referenced in the code instead. Check out https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md for more resources or have a go at training your own model if you have the necessary hardware https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10.
+ 
+ 
  * Select which objects to include in the log file
 ```
  # pulling raw output from object detection. Creates a list of dicts 
@@ -66,7 +70,7 @@ The guide walks through the following steps:
 ## Appendix: Remote logging (Windows 10 example)
 Depending on your use case you might want to set up the group detector in a different location to run remotely and passively collect data over a longer period of time for analysis. I cut out some of the code in the original file and created the instructions below to make this a bit easier.
 
-1. Clone or download *mobile_group_detection.py*<br>1. Follow the instructions to set up SSH  here https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md
+1. **Clone or download** *mobile_group_detection.py*<br>1. Follow the instructions to set up SSH  here https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md
 1. (Optional) Follow the instructions in the normal example above to customise the type and number of objects which trigger the logging.
 1. **Run** the *mobile_group_detection.py* from your /object_detection directory. Use _Ctrl + C_ to exit the logging mode. 
 
