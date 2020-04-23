@@ -17,7 +17,8 @@ I started this project over the Easter weekend in lockdown. I built this using a
 * Write the log to csv file for further analysis 
 
 
-To avoid data privacy concerns in live use on people the active object viewer and photo capture should be disabled. 
+When using on people to avoid data privacy concerns in live use on people the active object viewer and photo capture should be disabled by using the _mobile_group_detection.py_ file instead of the *open_cv_group_detection.py*. 
+
 
 The appendix includes instructions how to remotely access the  detection log in the Raspberry Pi for passive remote logging without using video or photo capture.
 
