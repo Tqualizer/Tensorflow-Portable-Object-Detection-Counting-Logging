@@ -70,7 +70,8 @@ The guide walks through the following steps:
 ## Appendix: Remote logging (Windows 10 example)
 Depending on your use case you might want to set up the group detector in a different location to run remotely and passively collect data over a longer period of time for analysis. I cut out some of the code in the original file and created the instructions below to make this a bit easier.
 
-1. **Clone or download** *mobile_group_detection.py*<br>1. Follow the instructions to set up SSH  here https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md
+1. **Clone or download** *mobile_group_detection.py*
+1. Follow the instructions to set up SSH here https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md
 1. (Optional) Follow the instructions in the normal example above to customise the type and number of objects which trigger the logging.
 1. **Run** the *mobile_group_detection.py* from your /object_detection directory. Use _Ctrl + C_ to exit the logging mode. 
 
