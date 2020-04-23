@@ -2,7 +2,7 @@
 #> Author: Tahir Mahmood
 #> Date: 15/4/20
 #> Description: This code draws upon standard examples in object detection using opencv to: 
-#>> Uses a TensorFlow classifier to perform object detection and counting.
+#>> Uses a TensorFlow classifier to perform live object detection and counting.
 #>> Identify and count and keep a tally based on only specified class(es) returned by the tensorflow model. 
 
 #> Suggested usage: Set up the group detector in a different location to run remotely and passively collect data over a longer period of time for analysis.
