@@ -1,4 +1,4 @@
-# Identify and log objects which meet your type and quantity criteria
+# Detect and log objects for your type and quantity criteria
 This Repo gives step by step instructions and script to show how build and deploy a mobile (Respberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model.
 
 
@@ -31,7 +31,7 @@ The guide walks through the following steps:
     1. Compile and install Protobuf
     1. Set up TensorFlow directory structure and the PYTHONPATH variable
 1. **Make sure your camera is configured** by following these instructions https://www.raspberrypi.org/documentation/configuration/camera.md
-1. Download or clone this Repo and put the *open_cv_group_detection.py* in your /object_detection directory
+1. **Download or clone** this Repo and put the *open_cv_group_detection.py* in your /object_detection directory
 1. (optional) **Customisation**
  * Select a custom model and number of objects (as described in the repo referenced in step 1). 
  
