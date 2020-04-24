@@ -86,8 +86,10 @@ Depending on your use case you might want to set up the group detector in a diff
 Use _Ctrl + C_ to exit the logging mode. 
 
 
-*Example of the log file output incliding a column for number of objects, object type and timestamp.* 
+*Example of the log file output including a column for number of objects, object type and timestamp.* 
+
+<p float="left">
 <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Remote%20setup%20picture.jpg" height ="350" />  
 <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/output.png" height="350" /> 
-
+</p>
 
