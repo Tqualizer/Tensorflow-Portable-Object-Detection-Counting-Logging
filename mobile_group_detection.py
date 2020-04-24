@@ -1,16 +1,17 @@
-######## Remotely detecting and logging groups of objects using tensorflow on picamera #########
+######## Detecting and capturing groups of objects using tensorflow on picamera #########
 #> Author: Tahir Mahmood
 #> Date: 15/4/20
 #> Description: This code draws upon standard examples in object detection using opencv to: 
-#>> Uses a TensorFlow classifier to perform live object detection and counting.
+#>> Use a TensorFlow classifier to perform live object detection viewing and counting.
 #>> Identify and count and keep a tally based on only specified class(es) returned by the tensorflow model. 
+#>> Log whenever a specified number of a specified class is returned and also capture an image of each example.
 
-#> Suggested usage: Set up the group detector in a different location to run remotely and passively collect data over a longer period of time for analysis.
-
+#> Suggested usage: Detecting groups of people not observing social distancing whilst walking through a narrow line of sight.
 #> Note: This can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
 
-## The boilerplate part of the code is copied from:
+## ## The boilerplate part of the code is copied from:
 ## https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py
+## And draws from ideas in: https://github.com/vineeth2628/Object-counting-using-tensorflow-on-raspberry-pi
 
 # Import packages
 import os
@@ -24,7 +25,6 @@ import argparse
 import sys
 import time
 import csv
-from subprocess import call
 
 ######## BOILERPLATE CODE #######
 # Set up camera constants
@@ -120,48 +120,46 @@ def group_counting():
 
     #Standard setup for the live object viewer
     for frame1 in camera.capture_continuous(rawCapture, format="bgr",use_video_port=True):
-        while True:
-            try:
-    
-                # Acquire frame and expand frame dimensions to have shape: [1, None, None, 3]
-                # i.e. a single-column array, where each item in the column has the pixel RGB value
-                frame = np.copy(frame1.array)
-                frame.setflags(write=1)
-                frame_expanded = np.expand_dims(frame, axis=0)
+      
+        # Acquire frame and expand frame dimensions to have shape: [1, None, None, 3]
+        # i.e. a single-column array, where each item in the column has the pixel RGB value
+        frame = np.copy(frame1.array)
+        frame.setflags(write=1)
+        frame_expanded = np.expand_dims(frame, axis=0)
 
-                # Perform the actual detection by running the model with the image as input
-                (boxes, scores, classes, num) = sess.run(
-                    [detection_boxes, detection_scores, detection_classes, num_detections],
-                    feed_dict={image_tensor: frame_expanded})
-
-                
-                ####### OBJECT SELECTION AND COUNTING CODE STARTS HERE #######
-                # pulling raw output from object detection. Creates a list of dicts 
-                # with details of each of the objects meeting the threshold in a given frame.
-                Validobj = [category_index.get(value) for index, value in enumerate (classes[0]) if scores [0,index]>0.4]
+        # Perform the actual detection by running the model with the image as input
+        (boxes, scores, classes, num) = sess.run(
+            [detection_boxes, detection_scores, detection_classes, num_detections],
+            feed_dict={image_tensor: frame_expanded})
+       
+        ####### OBJECT SELECTION AND COUNTING CODE STARTS HERE #######
+        # pulling raw output from object detection. Creates a list of dicts 
+        # with details of each of the objects meeting the threshold in a given frame.
+        Validobj = [category_index.get(value) for index, value in enumerate (classes[0]) if scores [0,index]>0.5]
         
-                # Choose your object
-                to_detect = 'person' 
+        # Choose your object
+        to_detect = 'person' 
         
-                # Creates a log if the chosen object has been detected.
-                if Validobj:
-                    data = [i["name"] for i in Validobj]
-                    # If in the given frame the number of a given object detected meets the condition then a log is made   
-                    if data.count(to_detect)>2:
-                        # Writes a line with how many of the object was detected along with a timestamp
-                        Summary = ["There is a group of " + str(data.count(to_detect)) + " people" ,time.ctime()]
-                        print(Summary)
+        # Creates a log if the chosen object has been detected.
+        if Validobj:
+            data = [i["name"] for i in Validobj]
+            # If in the given frame the number of a given object detected meets the condition then a log is made   
+            if data.count(to_detect)>0:
+                # Writes a line with how many of the object was detected along with a timestamp
+                Summary = ["There is a group of " + str(data.count(to_detect)) + " people" ,time.ctime()]
+                print(Summary)
                 
-                        evidence_stamp = [data.count(to_detect),to_detect,time.ctime()]
-                        output.append(evidence_stamp)
-
-            # Press 'q' to quit
-            except KeyboardInterrupt:
-            # This writes the data gathered in the output to a logfile
+                evidence_stamp = [data.count(to_detect),to_detect,time.ctime()]
+                output.append(evidence_stamp)
+                
+                            # This writes the data gathered in the output to a logfile
                 with open('output.csv','w',newline = '\n') as file:
                     writer = csv.writer(file)
                     writer.writerows(output)
-                break
+                time.sleep(5)
+
+        if cv2.waitKey(1) == ord('q'):
+            break
 
         rawCapture.truncate(0)
 
@@ -169,4 +167,8 @@ def group_counting():
 
 cv2.destroyAllWindows()
 
-group_counting()
+try:
+    while True:
+        group_counting()
+except KeyboardInterrupt:
+    sys.exit()
