@@ -11,16 +11,22 @@ I started this project over the Easter weekend in lockdown. I built this using a
   <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/multi-object%20logging.png" height="350" /> 
 </p>
 
-## Main features added
+## Main features
 * Custom logging based on your object specific criteria (e.g. each time a group of more than 2 people walk past)
 * Capture a photo each time your object specific criteria is triggered 
 * Write the log to csv file for further analysis 
 
+## Suggested usage:
+Where live capture and photgraphic evidence is required use the *open_cv_group_detection.py* as described in the main instructions.
 
-When using on people to avoid data privacy concerns in live use on people the active object viewer and photo capture should be disabled by using the _mobile_group_detection.py_ file instead of the *open_cv_group_detection.py*. 
+
+When using on people, to avoid data privacy concerns in live use on people the active object viewer and photo capture should be disabled by using the _mobile_group_detection.py_ file instead of the *open_cv_group_detection.py*. 
 
 
-The appendix includes instructions how to remotely access the  detection log in the Raspberry Pi for passive remote logging without using video or photo capture.
+The *mobile_group_detection.py* file is a slimmed down version of the *opencv_group_detection.py* code. Which is better for collecting data from a location with low to moderate amounts of footfall over an extended period to facilitate further analysis of behaviour patterns.
+
+
+The appendix includes instructions how to remotely access the  detection log in the Raspberry Pi for remote data logging using *mobile_group_detection.py*
 
 
 ## The main steps are as follows:
