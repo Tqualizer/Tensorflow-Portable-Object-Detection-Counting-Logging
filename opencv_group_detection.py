@@ -193,4 +193,8 @@ def group_counting():
 
 cv2.destroyAllWindows()
 
-group_counting()
+try:
+    while True:
+        group_counting()
+except KeyboardInterrupt:
+    sys.exit()
