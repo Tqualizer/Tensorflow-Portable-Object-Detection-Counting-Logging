@@ -62,7 +62,7 @@ The guide walks through the following steps:
                 evidence_stamp = [data.count(to_detect),to_detect,time.ctime()]
                 output.append(evidence_stamp)
 ```
-   * Specify the save location for the log file and image captures (by default this is the working directory).
+   * Specify the save location for the log file and image captures (by default this is the working directory). The log file includes a column for number of objects, object type and timestamp. See evidence.bmp for a sample image capture and output.png for a sample log file.
 
 5. **Run** the *open_cv_group_detection.py* from your /object_detection directory. To safely stop the process and save outputs press 'q' on the object viewer or Ctrl + C in the command line to exit. 
 
@@ -75,7 +75,9 @@ Depending on your use case you might want to set up the group detector in a diff
 1. **Clone or download** *mobile_group_detection.py*
 1. Follow the instructions to set up SSH here https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md
 1. (Optional) Follow the instructions in the normal example above to customise the type and number of objects which trigger the logging.
-1. **Run** the *mobile_group_detection.py* from your /object_detection directory. Use _Ctrl + C_ to exit the logging mode. 
+1. **Run** the *mobile_group_detection.py* from your */object_detection* directory. 
+
+Use _Ctrl + C_ to exit the logging mode. 
 
 
 <p float="left">
