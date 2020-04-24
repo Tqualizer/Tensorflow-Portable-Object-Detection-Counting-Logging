@@ -14,19 +14,6 @@ I started this project over the Easter weekend in lockdown. I built this using a
 
 <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/multi-object%20logging.png" width ="700" /> 
 
-## Suggested usage:
-Where live capture and photgraphic evidence is required use the *open_cv_group_detection.py* as described in the main instructions.
-
-
-When using on people, to avoid data privacy concerns in live use on people the active object viewer and photo capture should be disabled by using the _mobile_group_detection.py_ file instead of the *open_cv_group_detection.py*. 
-
-
-The *mobile_group_detection.py* file is a slimmed down version of the *opencv_group_detection.py* code. Which is better for collecting data from a location with low to moderate amounts of footfall over an extended period to facilitate further analysis of behaviour patterns.
-
-
-The appendix includes instructions how to remotely access the  detection log in the Raspberry Pi for remote data logging using *mobile_group_detection.py*
-
-
 ## The main steps are as follows:
 1. **Set up and install TensorFlow and OpenCV on your Raspberry Pi** by following this great guide by Evan https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py 
 The guide walks through the following steps:
@@ -71,6 +58,19 @@ The guide walks through the following steps:
 5. **Run** the *open_cv_group_detection.py* from your /object_detection directory. To safely stop the process and save outputs press 'q' on the object viewer or Ctrl + C in the command line to exit. 
 
 <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds example.png" /> 
+
+## Suggested usage:
+Where live capture and photgraphic evidence is required use the *open_cv_group_detection.py* as described in the main instructions.
+
+
+When using on people, to avoid data privacy concerns in live use on people the active object viewer and photo capture should be disabled by using the _mobile_group_detection.py_ file instead of the *open_cv_group_detection.py*. 
+
+
+The *mobile_group_detection.py* file is a slimmed down version of the *opencv_group_detection.py* code. Which is better for collecting data from a location with low to moderate amounts of footfall over an extended period to facilitate further analysis of behaviour patterns.
+
+
+The appendix includes instructions how to remotely access the  detection log in the Raspberry Pi for remote data logging using *mobile_group_detection.py*
+
 
 
 ## Appendix: Remote logging (Windows 10 example)
