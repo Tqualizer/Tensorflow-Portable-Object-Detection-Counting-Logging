@@ -1,12 +1,12 @@
 ######## Detecting and capturing groups of objects using tensorflow on picamera #########
 #> Author: Tahir Mahmood
 #> Date: 15/4/20
-#> Description: This code draws upon standard examples in object detection using opencv to: 
-#>> Use a TensorFlow classifier to perform live object detection viewing and counting.
+#> Description: This is a slimmed down version of the opencv_group_detection.py code which draws upon standard examples in object detection using opencv to: 
+#>> Use a TensorFlow classifier to perform live object detection and counting.
 #>> Identify and count and keep a tally based on only specified class(es) returned by the tensorflow model. 
-#>> Log whenever a specified number of a specified class is returned and also capture an image of each example.
+#>> Log whenever a specified number of a specified class is returned in a seperate csv file.
 
-#> Suggested usage: Detecting groups of people not observing social distancing whilst walking through a narrow line of sight.
+#> Suggested usage: Collecting data from a location with low to moderate amounts of footfall over an extended period to facilitate further analysis of behaviour patterns.
 #> Note: This can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
 
 ## ## The boilerplate part of the code is copied from:
