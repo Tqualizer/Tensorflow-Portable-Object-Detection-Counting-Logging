@@ -7,8 +7,8 @@ Note: This project works best when the camera is aimed at a small area in which 
 I started this project over the Easter weekend in lockdown. I built this using a Raspberry Pi 3B+ and standard IR camera. Starting with the boilerplate code here: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py . Originally I just wanted a way of counting the ducks which swim by my window but I decided to adapt the code further and share to hopefully be of some more practical use! 
 
 <p float="left">
-  <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg" height="350" />
-  <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/multi-object%20logging.png" height="350" /> 
+  <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg" width ="700" />
+  <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/multi-object%20logging.png" width ="700" /> 
 </p>
 
 ## Main features
@@ -87,7 +87,7 @@ Use _Ctrl + C_ to exit the logging mode.
 
 
 *Example of the log file output incliding a column for number of objects, object type and timestamp.* 
-<img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Remote%20setup%20picture.jpg" height ="350" />  
-<img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/output.png" height="350" /> 
+<img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Remote%20setup%20picture.jpg" height ="450" />  
+<img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/output.png" height="450" /> 
 
 
