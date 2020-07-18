@@ -1,4 +1,4 @@
-# Detect and log objects for your type and quantity criteria
+# Detect and log objects by type and quantity
 This Repo gives step by step instructions and script to show how build and deploy a mobile (Respberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model.
 
 
