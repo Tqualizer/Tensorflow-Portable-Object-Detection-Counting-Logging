@@ -7,6 +7,7 @@ Note: This project works best when the camera is aimed at a small area in which 
 I started this project over the Easter weekend in lockdown. I built this using a Raspberry Pi 3B+ and standard IR camera. Starting with the boilerplate code here: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py . Originally I just wanted a way of counting the ducks which swim by my window but I decided to adapt the code further and share to hopefully be of some more practical use! 
 
 <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Setup%20picture.jpg" width ="700" />
+
 ## Main features
 * Custom logging based on your object specific criteria (e.g. each time a group of more than 2 people walk past)
 * Capture a photo each time your object specific criteria is triggered 
