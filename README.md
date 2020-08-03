@@ -12,9 +12,9 @@ I started this project over the Easter weekend in lockdown. I built this using a
 * Custom logging based on your object specific criteria (e.g. each time a group of more than 2 people walk past)
 * Capture a photo each time your object specific criteria is triggered 
 * Write the log to csv file for further analysis 
-* [New 03/08/2020] - New file *group_detection_recorded.py* added to perform logging on an existing video clips
+* [New 03/08/2020] - New file *group_detection_recorded.py* added to perform logging on an existing video clip.
 
-<img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/multi-object%20logging.png" width ="700" /> 
+[![](http://img.youtube.com/vi/VT91nlADUBw/0.jpg)](http://www.youtube.com/watch?v=VT91nlADUBw "Counting people using Tensorflow")
 
 ## Getting set up for group detection direct from the Raspberry Pi Camera (or USB camera)
 1. **Set up and install TensorFlow and OpenCV on your Raspberry Pi** by following this great guide by Evan https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py 
@@ -59,7 +59,7 @@ The guide walks through the following steps:
 
 5. **Run** the *open_cv_group_detection.py* from your /object_detection directory. To safely stop the process and save outputs press 'q' on the object viewer or Ctrl + C in the command line to exit. 
 
-<img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds example.png" /> 
+<img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/multi-object%20logging.png" width ="700" /> 
 
 ## Using an existing recording
 1. Follow the same steps 1-3 above ensuring that you download *group_detection_recorded.py* into the object_detection directory.
