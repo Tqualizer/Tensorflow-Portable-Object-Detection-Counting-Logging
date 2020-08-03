@@ -20,8 +20,6 @@ I started this project over the Easter weekend in lockdown. I built this using a
       </a>
 </div>
 
-[![](http://img.youtube.com/vi/VT91nlADUBw/0.jpg)](http://www.youtube.com/watch?v=VT91nlADUBw "Counting people using Tensorflow")
-
 ## Getting set up for group detection direct from the Raspberry Pi Camera (or USB camera)
 1. **Set up and install TensorFlow and OpenCV on your Raspberry Pi** by following this great guide by Evan https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py 
 The guide walks through the following steps:
