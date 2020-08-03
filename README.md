@@ -16,7 +16,7 @@ I started this project over the Easter weekend in lockdown. I built this using a
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=/VT91nlADUBw/">
-         <img src="https://img.youtube.com/vi//VT91nlADUBw/0.jpg" style="width:200%;">
+         <img src="https://img.youtube.com/vi/VT91nlADUBw/0.jpg" style="width:200%;">
       </a>
 </div>
 
