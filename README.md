@@ -1,8 +1,8 @@
 # Detect and log objects by type and quantity
-This Repo gives step by step instructions and script to show how build and deploy a mobile (Respberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model.
+This Repo gives step by step instructions and script to show how build and deploy a mobile (Raspberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model. The most recent update includes a script that will perform the same object detection on an existing video clip.
 
 
-Note: This project works best when the camera is aimed at a small area in which objects will move through over the course of a few seconds. To avoid duplicated logs this can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
+Note: The live object counter works best when the camera is aimed at a small area in which objects will move through over the course of a few seconds. To avoid duplicated logs this can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
 ## Introduction
 I started this project over the Easter weekend in lockdown. I built this using a Raspberry Pi 3B+ and standard IR camera. Starting with the boilerplate code here: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py . Originally I just wanted a way of counting the ducks which swim by my window but I decided to adapt the code further and share to hopefully be of some more practical use! 
 
@@ -12,10 +12,11 @@ I started this project over the Easter weekend in lockdown. I built this using a
 * Custom logging based on your object specific criteria (e.g. each time a group of more than 2 people walk past)
 * Capture a photo each time your object specific criteria is triggered 
 * Write the log to csv file for further analysis 
+* [New 03/08/2020] - New file *group_detection_recorded.py* added to perform logging on an existing video clips
 
 <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/multi-object%20logging.png" width ="700" /> 
 
-## The main steps are as follows:
+## Getting set up for group detection direct from the Raspberry Pi Camera (or USB camera)
 1. **Set up and install TensorFlow and OpenCV on your Raspberry Pi** by following this great guide by Evan https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py 
 The guide walks through the following steps:
     1. Update the Raspberry Pi
@@ -60,12 +61,22 @@ The guide walks through the following steps:
 
 <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Birds example.png" /> 
 
+## Using an existing recording
+1. Follow the same steps 1-3 above ensuring that you download *group_detection_recorded.py* into the object_detection directory.
+
+1. Make sure the file you want to process is in the same folder as the environment you are using (or specify a different path in the script).
+
+1. When running  *group_detection_recorded.py* from the command line, specify in the input filename in the --args:
+
+1. The script will run and when finished the output.avi file will be waiting in your output folder.
+
+
 ## Suggested usage:
 Where live capture and photgraphic evidence is required use the *open_cv_group_detection.py* as described in the main instructions.
 
-
 When using on people, to avoid data privacy concerns in live use on people the active object viewer and photo capture should be disabled by using the _mobile_group_detection.py_ file instead of the *open_cv_group_detection.py*. 
 
+The *group_detection_recorded.py* enables you to run the group detection on an existing video. The sample given is a stock footage inside a data center to show how it could be used to track if too many people were in a restricted area based on surveilance footage.
 
 The *mobile_group_detection.py* file is a slimmed down version of the *opencv_group_detection.py* code. Which is better for collecting data from a location with low to moderate amounts of footfall over an extended period to facilitate further analysis of behaviour patterns.
 
