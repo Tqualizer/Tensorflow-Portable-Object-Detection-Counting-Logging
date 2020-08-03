@@ -15,7 +15,7 @@ I started this project over the Easter weekend in lockdown. I built this using a
 * [New 03/08/2020] - New file *group_detection_recorded.py* added to perform logging on an existing video clip. Check out the output video on Youtube. The concept works but the accuracy isn't great because of the camera angle, fairly basic off the shelf Tensorflow model and limited processing capacity of the Raspberry Pi.
 
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=/VT91nlADUBw/">
+      <a href="https://www.youtube.com/watch?v=VT91nlADUBw/">
          <img src="https://img.youtube.com/vi/VT91nlADUBw/0.jpg" style="width:200%;">
       </a>
 </div>
