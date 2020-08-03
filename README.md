@@ -12,7 +12,7 @@ I started this project over the Easter weekend in lockdown. I built this using a
 * Custom logging based on your object specific criteria (e.g. each time a group of more than 2 people walk past)
 * Capture a photo each time your object specific criteria is triggered 
 * Write the log to csv file for further analysis 
-* [New 03/08/2020] - New file *group_detection_recorded.py* added to perform logging on an existing video clip.
+* [New 03/08/2020] - New file *group_detection_recorded.py* added to perform logging on an existing video clip. Check out the output video on Youtube. The concept works but the accuracy isn't great because of the camera angle, fairly basic off the shelf Tensorflow model and limited processing capacity of the Raspberry Pi.
 
 [![](http://img.youtube.com/vi/VT91nlADUBw/0.jpg)](http://www.youtube.com/watch?v=VT91nlADUBw "Counting people using Tensorflow")
 
@@ -67,7 +67,9 @@ The guide walks through the following steps:
 1. Make sure the file you want to process is in the same folder as the environment you are using (or specify a different path in the script).
 
 1. When running  *group_detection_recorded.py* from the command line, specify in the input filename in the --args:
-
+```
+/tensorflow1/models/research/object_detection python3 group_detection_recorded.py --video yourvideofile.mp4
+```
 1. The script will run and when finished the output.avi file will be waiting in your output folder.
 
 
