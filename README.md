@@ -65,7 +65,7 @@ The guide walks through the following steps:
 
 5. **Run** the *open_cv_group_detection.py* from your /object_detection directory. To safely stop the process and save outputs press 'q' on the object viewer or Ctrl + C in the command line to exit. 
 
-<img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Examples/multi-object%20logging.png" width ="700" /> 
+<img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Examples/Group%20of%20people%20examples.png" width ="700" /> 
 
 ## Using an existing recording
 1. Follow the same steps 1-3 above ensuring that you download *group_detection_recorded.py* into the object_detection directory.
@@ -108,6 +108,6 @@ Use _Ctrl + C_ to exit the logging mode.
 
 <p float="center">
 <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Examples/Remote%20setup%20picture.jpg" height ="350" />  
-<img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Examples/output.png" height="350" /> 
+<img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Examples/csv output.png" height="350" /> 
 </p>
 
