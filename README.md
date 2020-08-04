@@ -1,8 +1,10 @@
 # Detect and log objects by type and quantity
-This Repo gives step by step instructions and script to show how build and deploy a mobile (Raspberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model. The most recent update includes a script that will perform the same object detection on an existing video clip.
+This Repo gives step by step instructions and script to show how build and deploy a mobile (Raspberry Pi) object detector that can be used to detect and report groups of objects detected using TensorFlow and your chosen trained model. The most recent update includes a script that will perform the same object counting on an existing video clip.
 
 
-Note: The live object counter works best when the camera is aimed at a small area in which objects will move through over the course of a few seconds. To avoid duplicated logs this can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups.
+Note: The live object counter works best when the camera is aimed at a small area in which objects will move through over the course of a few seconds. To avoid duplicated logs this can be futher enhanced with object tracking to avoid overcounting of very slow moving or stationary groups. Check out my next project where I dive into object and directional tracking here https://github.com/Tqualizer/Directional-object-tracking-with-TFLite-and-Edge-TPU
+
+
 ## Introduction
 I started this project over the Easter weekend in lockdown. I built this using a Raspberry Pi 3B+ and standard IR camera. Starting with the boilerplate code here: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py . Originally I just wanted a way of counting the ducks which swim by my window but I decided to adapt the code further and share to hopefully be of some more practical use! 
 
