@@ -68,7 +68,7 @@ The guide walks through the following steps:
 <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Examples/Group%20of%20people%20examples.png" width ="700" /> 
 
 ## Using an existing recording
-1. Follow the same steps 1-3 above ensuring that you download *group_detection_recorded.py* into the object_detection directory.
+1. Follow the same steps 1-3 above ensuring that you download *group_detection_recorded.py* into the object_detection directory. This version of the code places an ALERT text over the video when the trigger condition is being met met (rather than taking a screenshot given the recording is already recorded). 
 
 1. Make sure the file you want to process is in the same folder as the environment you are using (or specify a different path in the script).
 
@@ -76,7 +76,7 @@ The guide walks through the following steps:
 ```
 /tensorflow1/models/research/object_detection python3 group_detection_recorded.py --video yourvideofile.mp4
 ```
-1. The script will run and when finished the output.avi file will be waiting in your output folder.
+4. The script will run and when finished the output.avi file will be waiting in your output folder.
 
 <img src="https://img.youtube.com/vi/VT91nlADUBw/0.jpg" style="width:200%;">
 
