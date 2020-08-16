@@ -18,7 +18,7 @@ I started this project over the Easter weekend in lockdown. I built this using a
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=VT91nlADUBw/">
-         <img src="https://img.youtube.com/vi/VT91nlADUBw/0.jpg" style="width:200%;">
+      <img src="https://github.com/Tqualizer/opencv-group-detection/blob/master/Examples/TFgroupYT.png" width ="700" />    
       </a>
 </div>
 
@@ -77,6 +77,8 @@ The guide walks through the following steps:
 /tensorflow1/models/research/object_detection python3 group_detection_recorded.py --video yourvideofile.mp4
 ```
 1. The script will run and when finished the output.avi file will be waiting in your output folder.
+
+<img src="https://img.youtube.com/vi/VT91nlADUBw/0.jpg" style="width:200%;">
 
 
 ## Suggested usage:
